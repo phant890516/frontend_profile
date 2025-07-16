@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウント作成完了</title>
+</head>
+<body>
+    <h2>アカウント作成完了</h2>
+    <p>下記のアカウントが登録されました。</p>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>{{account.ID}}</td>
+        </tr>
+        <tr>
+            <td>権限</td>
+            <td>{{account.authority}}</td>
+        </tr>
+    </table>
+    <br>
+    <form action="/" method = "GET">
+        <tr>
+            <td><input type="submit" value="トップヘ戻る"></td>
+        </tr>
+    </form>
+</body>
+</html>

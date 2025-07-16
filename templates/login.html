@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面</title>
+</head>
+<body>
+    <h2>ログイン</h2>
+    
+    <form action="/login/auth" method ="POST">
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="ID" value={{account.ID}}></td>
+            <td>{{etbl.ID}}</td>
+        </tr>
+        <tr>
+            <td>パスワード</td>
+            <td><input type="password" name="password" value={{account.password}}></td>
+            <td>{{etbl.password}}</td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="ログイン">
+    </form>
+    
+    <form action="/" method = "GET">
+        <input type="submit" value="戻る">
+    </form>
+    
+</body>
+</html>

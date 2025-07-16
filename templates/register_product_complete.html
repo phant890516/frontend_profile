@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品登録完了</title>
+</head>
+<body>
+    <h2>商品登録完了</h2>
+    <h3>下記の商品情報が登録されました</h3>
+    <table border="1">
+        <tr>
+            <td>商品番号</td>
+            <td>{{register.scode}}</td>
+        </tr>
+        <tr>
+            <td>商品名</td>
+            <td>{{register.sname}}</td>
+        </tr>
+        <tr>
+            <td>販売価格</td>
+            <td>{{register.price}}</td>
+        </tr>
+        <tr>
+            <td>商品説明</td>
+            <td>{{register.detail}}</td>
+        </tr>
+        <tr>
+            <td>商品画像</td>
+            <td><img src="{{image_url}}"></td>
+        </tr>
+    </table>
+    <br>
+    <form action="/" method="GET">
+        <input type="submit" value ="TOPへ戻る">
+    </form>
+
+    <br>
+    <form action="/register_product" method="GET">
+        <input type="submit" value ="新規登録">
+    </form>
+</body>
+</html>

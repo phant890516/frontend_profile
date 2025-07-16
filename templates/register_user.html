@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウント作成</title>
+</head>
+<body>
+    <h2>アカウント作成</h2>
+     
+    <form action="/register_user/complete" method = "POST">
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="ID" value={{account.ID}}></td>
+            <td>{{etbl.ID}}</td>
+        </tr>
+        <tr>
+            <td>パスワード</td>
+            <td><input type="password" name="password" value={{account.password}}></td>
+            <td>{{etbl.password}}</td>
+        </tr>
+        <tr>
+            <td>権限</td>
+            <td>
+                <input type="radio" name="authority" value="管理者">管理者
+                <input type="radio" name="authority" value="一般" checked>一般
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="作成">
+    <br>
+    <br>
+    </form>
+    <form action="/" method = "GET">
+        <input type="submit" value="戻る">
+    </form>
+    
+</body>
+</html>

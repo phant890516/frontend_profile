@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品管理トップ</title>
+</head>
+<body>
+    <h2>商品管理トップページ</h2>
+    <table border="1">
+    
+    {%if user%}
+    <form action="/products" method = "GET">
+        <tr>
+            <td><input type="submit" value="商品一覧"></td>
+            <td>登録済み商品を一覧表示する</td>
+        </tr>
+    </form>
+    {%if authority == 0%}
+    <form action="/register_product" method="GET">
+        <tr>
+            <td><input type="submit" value="新規商品登録"></td>
+            <td>新しい商品を登録する</td>
+        </tr>
+    </form>
+     {%endif%}
+    <form action="/logout" method = "GET">
+        <tr>
+            <td><input type="submit" value="ログアウト"></td>
+            <td>システムからログアウトする</td>
+        </tr>
+    </form>
+    {%else%}
+    <form action="/login" method = "GET">
+        <tr>
+            <td><input type="submit" value="ログイン"></td>
+            <td>システムにログインする</td>
+        </tr>
+    </form>
+    
+    <form action="/register_user" method = "GET">
+        <tr>
+            <td><input type="submit" value="アカウント作成"></td>
+            <td>新しいアカウントを作成する</td>
+        </tr>
+    </form>
+    {%endif%}
+    </table>
+</body>
+</html>

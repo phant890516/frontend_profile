@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳細</title>
+</head>
+<body>
+    <h2>商品詳細</h2>
+    <form action="/delete_product_complete/{{result.scode}}" method="POST">
+    <table border="1">
+        <tr>
+            <td>商品番号</td>
+            <td>{{result.scode}}</td>
+        </tr>
+        <tr>
+            <td>商品名</td>
+            <td>{{result.sname}}</td>
+        </tr>
+        <tr>
+            <td>販売価格</td>
+            <td>{{result.price}}</td>
+        </tr>
+        <tr>
+            <td>商品説明</td>
+            <td>{{result.detail}}</td>
+        </tr>
+        <tr>
+            <td>商品画像</td>
+            <td><img src="../static/img/{{result.filename}}" style='max-width:200px; max-height:200px; width:auto; height:auto;'></td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="submit" value="削除実行">
+    </form>
+    <form action="/products" method="GET">
+        <input type="submit" value="キャンセル">
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"> 
+    <title>商品一覧画面</title>
+</head>
+<body>
+    <h2>商品一覧画面</h2>
+    <br>
+    <table border="1">
+        <tr>
+            <th>商品番号</th>
+            <th>商品名</th>
+            <th>販売価格</th>
+            <th>商品画像</th>
+            <th>詳細</th>
+        </tr>
+        {%for product in products%}
+            <tr>
+                <td>{{product.scode}}</td>
+                <td>{{product.sname}}</td>
+                <td>{{product.price}}</td>
+                <td><img src="../static/img/{{product.filename}}" style='max-width:200px; max-height:200px; width:auto; height:auto;'></td>
+                
+                <form action="/products/{{product.scode}}" method="GET">
+                    <td><input type="submit" value="詳細"></td>
+                </form>
+
+                {%if authority == 0 %}
+                <form action="/update_product/{{product.scode}}" method="GET">
+                    <td><input type="submit" value="更新"></td>
+                </form>
+                
+                <form action="/delete_product/{{product.scode}}" method="GET">
+                    <td><input type="submit" value="削除"></td>
+                </form>
+                {%endif%}
+
+            </tr>
+        {%endfor%}
+    </table>
+    <form action="/" method ="GET">
+        <input type="submit" value="TOPへ戻る">
+    </form>
+</body>
+</html>

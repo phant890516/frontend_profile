@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品情報更新</title>
+</head>
+<body>
+    <h2>商品情報更新</h2>
+    <form action="/update_product_complete/{{product.scode}}" method="POST" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>商品番号</td>
+            <td><input type="hidden" name="scode" value={{product.scode}}>{{product.scode}}</td>
+            <td><font color ="red"></font></td>
+        </tr>
+        <tr>
+            <td>商品名</td>
+            <td><input type="text" name="sname" value={{product.sname}}></td>
+            <td><font color ="red">{{error.sname}}</font></td>
+        </tr>
+        <tr>
+            <td>販売価格</td>
+            <td><input type="text" name="price" value={{product.price}}></td>
+            <td><font color ="red">{{error.price}}</font></td>
+        </tr>
+        <tr>
+            <td>商品説明</td>
+            <td><input type="text" name="detail" value={{product.detail}}></td>
+            <td><font color ="red">{{error.detail}}</font></td>
+        </tr>
+        <tr>
+            <td>現在の画像</td>
+            <td><img src="../static/img/{{product.filename}}" style='max-width:200px; max-height:200px; width:auto; height:auto;'></td>
+        </tr>
+        <tr>
+            <td>新しい画像</td>
+            <td><input type="file" name="img">{{error.img}}</td>
+            <td>変更する場合のみ選択</td>
+        </tr>
+    </table>
+    <br>
+    
+        <input type="submit" value ="更新">
+    </form>
+
+    <br>
+    <form action="/products" method="GET">
+        <input type="submit" value ="戻る">
+    </form>
+</body>
+</html>

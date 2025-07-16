@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品新規登録</title>
+</head>
+<body>
+    <form action="/register_product_complete" method="POST" enctype="multipart/form-data">
+        <h2>商品新規登録</h2>
+        <table border="1">
+            <tr>
+                <td>商品番号</td>
+                <td><input type="text" name="scode"></td>
+                <td><font color ="red">{{error.scode}}</font></td>
+            </tr>
+            <tr>
+                <td>商品名</td>
+                <td><input type="text" name="sname"></td>
+                <td><font color ="red">{{error.sname}}</font></td>
+            </tr>
+            <tr>
+                <td>販売価格</td>
+                <td><input type="text" name="price"></td>
+                <td><font color ="red">{{error.price}}</font></td>
+            </tr>
+            <tr>
+                <td>商品説明</td>
+                <td><input type="text" name="detail"></td>
+                <td><font color ="red">{{error.detail}}</font></td>
+            </tr>
+            <tr>
+                <td>商品画像</td>
+                <td><input type="file" name="img"></td>
+                <td><font color = "red">{{error.img}}</font></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" VALUE="登録">
+    </form>
+    <form action="/" method ="GET">
+        <input type="submit" value="TOPへ戻る">
+    </form>
+</body>
+</html>
