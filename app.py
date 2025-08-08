@@ -427,7 +427,8 @@ def connect_db():
         host = os.environ.get('AIVEN_DB_HOST'),
         user = os.environ.get('AIVEN_DB_USER'),
         passwd = os.environ.get('AIVEN_DB_PASSWORD'),
-        db ='py23db'
+        db ='py23db',
+        port=os.environ.get('AIVEN_DB_PORT')
     )
     return con
 
