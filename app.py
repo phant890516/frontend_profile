@@ -424,9 +424,9 @@ def  delete_product_complete(scode):
 #DB設定------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def connect_db():
     con=mysql.connector.connect(
-        host = 'localhost',
-        user = 'root',
-        passwd = '',
+        host = os.environ.get('AIVEN_DB_HOST'),
+        user = os.environ.get('AIVEN_DB_USER'),
+        passwd = os.environ.get('AIVEN_DB_PASSWORD'),
         db ='py23db'
     )
     return con
