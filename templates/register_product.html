@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品新規登録</title>
-</head>
-<body>
+    {% extends "base.html"%}
+    {%block title%}商品新規登録{%endblock%}
+
+    {%block content%}
     <form action="/register_product_complete" method="POST" enctype="multipart/form-data">
         <h2>商品新規登録</h2>
         <table border="1">
@@ -41,5 +37,4 @@
     <form action="/" method ="GET">
         <input type="submit" value="TOPへ戻る">
     </form>
-</body>
-</html>
+    {%endblock%}

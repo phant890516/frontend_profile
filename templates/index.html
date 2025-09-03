@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品管理トップ</title>
-</head>
-<body>
+
+    {% extends "base.html"%}
+
+    {% block title%}商品管理トップ{% endblock%}
+ 
+
+    {% block content%}
     <h2>商品管理トップページ</h2>
     <table border="1">
     
@@ -46,5 +45,4 @@
     </form>
     {%endif%}
     </table>
-</body>
-</html>
+    {%endblock%}

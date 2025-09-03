@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css"> 
-    <title>商品一覧画面</title>
-</head>
-<body>
+    {%extends "base.html"%} 
+    {%block title%}商品一覧画面{%endblock%}
+
+    {%block content%}
     <h2>商品一覧画面</h2>
     <br>
     <table border="1">
@@ -44,5 +39,4 @@
     <form action="/" method ="GET">
         <input type="submit" value="TOPへ戻る">
     </form>
-</body>
-</html>
+    {%endblock%}

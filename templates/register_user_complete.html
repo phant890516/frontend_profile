@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アカウント作成完了</title>
-</head>
-<body>
+    {% extends "base.html"%}
+    {%block title%}アカウント作成完了{%endblock%}
+
+    {%block content%}
     <h2>アカウント作成完了</h2>
     <p>下記のアカウントが登録されました。</p>
     <table border="1">
@@ -24,5 +20,4 @@
             <td><input type="submit" value="トップヘ戻る"></td>
         </tr>
     </form>
-</body>
-</html>
+    {%endblock%}

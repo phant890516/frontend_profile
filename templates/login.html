@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン画面</title>
-</head>
-<body>
+    {% extends "base.html" %}
+    {% block title %}ログイン画面{%endblock%}
+
+    {%block content%}
     <h2>ログイン</h2>
     
     <form action="/login/auth" method ="POST">
@@ -28,6 +24,4 @@
     <form action="/" method = "GET">
         <input type="submit" value="戻る">
     </form>
-    
-</body>
-</html>
+    {%endblock%}

@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品登録完了</title>
-</head>
-<body>
+    {% extends "base.html"%}
+    {%block title%}商品登録完了{%endblock%}
+
+    {%block content%}
     <h2>商品登録完了</h2>
     <h3>下記の商品情報が登録されました</h3>
     <table border="1">
@@ -39,5 +36,4 @@
     <form action="/register_product" method="GET">
         <input type="submit" value ="新規登録">
     </form>
-</body>
-</html>
+    {%endblock%}

@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品詳細</title>
-</head>
-<body>
+    {% extends "base.html" %}
+    {% block title%}{{result.sname}}{%endblock%}
+
+    {%block content%}
     <h2>商品詳細</h2>
     <table border="1">
         <tr>
@@ -33,5 +30,4 @@
     <form action="/products" method="GET">
         <input type="submit" value="一覧に戻る">
     </form>
-</body>
-</html>
+    {%endblock%}
